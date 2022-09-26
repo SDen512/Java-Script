@@ -17,3 +17,28 @@ mySelf["first name"] = "Denis";
 mySelf["last name"] = "Subach";
 mySelf.age = 40;
 console.log(Object.keys(mySelf));
+
+// Массивы объектов. Получение доступа к значениям свойств объектов
+
+let cars = [
+   {
+      "model": "Toyota Yaris",
+      "color": "red",
+      "year": 2020
+   },
+   {
+      "model": "Honda Pilot",
+      "color": "white",
+      "year": 2021
+   },
+   {
+      "model": "Opel Zafira",
+      "color": "black",
+      "year": 2022
+   }
+   
+];
+
+console.log(cars[1]);
+console.log(cars[1]["color"]);
+console.log(cars[1].year);
