@@ -42,3 +42,28 @@ let cars = [
 console.log(cars[1]);
 console.log(cars[1]["color"]);
 console.log(cars[1].year);
+
+// Задания с использованием объектов
+
+let scores = {
+   "Alex": 0,
+   "Tom": 0,
+   "Paul": 0
+}
+scores["Alex"] +=10;
+console.log(scores.Alex);
+scores.Tom +=7;
+console.log(scores["Tom"]);
+scores.Paul +=5;
+console.log(scores.Paul);
+console.log(scores);
+
+// Одной строкой извлечь число 123
+
+let myCrazyObject = {
+   "name": "Нелепый объект",
+   "some array": [7, 9, { purpose: "путаница", number: 123 }, 3.3],
+   "random animal": "Банановая акула"
+};
+console.log(myCrazyObject["some array"][2]["number"]);
+console.log(myCrazyObject["some array"][2].number);
