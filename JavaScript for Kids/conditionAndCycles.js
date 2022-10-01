@@ -14,7 +14,6 @@ else {
 //Цикл while
 
 let sheepCounted = 0;
-
 while(sheepCounted < 10) {
    console.log("Посчитано овец: " + sheepCounted);
    sheepCounted++;
@@ -31,3 +30,25 @@ while(numFirst <= 5 && numSecond <=5) {
    numSecond++;
 }
 console.log("End");
+
+
+//Цикл for
+
+let timesToSayHello = 3;
+for(let i = 0; i < timesToSayHello; i++) {
+   console.log("Привет");
+}
+
+//Перебор элементов массива
+
+let animals = ["тигр", "лев", "медведь", "волк"];
+for(let i =0; i < animals.length; i++) {
+   console.log("В этом зоопарке есть: " + animals[i]);
+}
+
+//Перебор символов строки
+
+let myName = "Денис";
+for(let i =0; i < myName.length; i++) {
+   console.log("В моем имени есть буква: " + myName[i]);
+}
