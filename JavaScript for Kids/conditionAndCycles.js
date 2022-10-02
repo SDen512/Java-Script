@@ -52,3 +52,34 @@ let myName = "Денис";
 for(let i =0; i < myName.length; i++) {
    console.log("В моем имени есть буква: " + myName[i]);
 }
+
+//Написать цикл, который печатает степени тройки не превышающие 10000
+
+for(let x = 3; x < 10000; x *= 3) {
+   console.log(x);
+}
+
+let i = 3;
+while(i < 10000) {
+   console.log(i);
+   i = i * 3;
+}
+
+//Прекрасные животные
+
+let someAnimals = ["Кот", "Рыба", "Лемур", "Комодский варан"];
+for(i = 0; i < someAnimals.length; i++) {
+  someAnimals[i] = someAnimals[i] + " - прекрасное животное";
+}
+console.log(someAnimals);
+
+//Генератор случайных строк
+
+let alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+let randomString = "";
+while(randomString.length < 10) {
+   randomString += alphabet[Math.floor(Math.random() * alphabet.length)];
+}
+console.log(randomString);
+
+//Хакерский язык
