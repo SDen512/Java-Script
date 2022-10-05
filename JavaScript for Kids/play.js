@@ -50,4 +50,25 @@ for(let i = 0; i < word.length; i++) {
    answerArray[i] = "_";
 }
 
-let remainingLetter = word.length;
+let remainingLetters = word.length;
+
+// Игровой цикл
+
+while(remainingLetters > 0) {
+
+   //Отображаем состояние игры
+
+   alert(answerArray.join(" "));
+
+   //Обработка введенного ответа
+
+   let guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры.");
+   if(guess === null) {
+      break;
+   } else if(guess.length !==1) {
+      alert("Пожалуйста, введите только одну букву.");
+   } else {
+
+      //Обновляем состояние игры
+   }
+}
