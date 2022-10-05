@@ -43,3 +43,11 @@ let words = [
 ];
 let word = words[Math.floor(Math.random() * words.length)];
 
+// Создаем итоговый массив
+
+let answerArray = [];
+for(let i = 0; i < word.length; i++) {
+   answerArray[i] = "_";
+}
+
+let remainingLetter = word.length;
