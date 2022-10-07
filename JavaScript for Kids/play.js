@@ -67,6 +67,7 @@ while(remainingLetters > 0) {
    //Обработка введенного ответа
 
    let guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры.");
+   guess = guess.toLowerCase();
    if(guess === null) {
       break;
    } else if(guess.length !== 1) {
