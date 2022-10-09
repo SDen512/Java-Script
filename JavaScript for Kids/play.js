@@ -55,10 +55,11 @@ for(let i = 0; i < word.length; i++) {
 }
 
 let remainingLetters = word.length;
+let numberOfAttempts = 3;
 
 // Игровой цикл
 
-while(remainingLetters > 0) {
+while(remainingLetters > 0 && numberOfAttempts > 0 ) {
 
    //Отображаем состояние игры
 
@@ -73,19 +74,25 @@ while(remainingLetters > 0) {
    } else if(guess.length !== 1) {
       alert("Пожалуйста, введите только одну букву.");
    } else {
-
+      
       //Обновляем состояние игры
 
       for(let j = 0; j < word.length; j++) {
          if(word[j] === guess) {
             answerArray[j] = guess;
             remainingLetters--;
-         }
+            numberOfAttempts--;
+         } 
       }
    }
 }
 
 //Отображаем ответ и поздравляем игрока с победой
 
-alert(answerArray.join(" "));
-alert("Отлично! Было загадано слово " + word);
+if(numberOfAttempts === 0) {
+   alert("У вас закончились попытки");
+} 
+/* else {
+   alert(answerArray.join(" "));
+   alert("Отлично! Было загадано слово " + word);
+} */
