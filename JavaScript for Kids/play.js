@@ -78,7 +78,7 @@ while(remainingLetters > 0 && numberOfAttempts > 0 ) {
       //Обновляем состояние игры
 
       for(let j = 0; j < word.length; j++) {
-         if(word[j] === guess) {
+         if(word[j] === guess && answerArray[j] === "_") {
             answerArray[j] = guess;
             remainingLetters--;
          } 
