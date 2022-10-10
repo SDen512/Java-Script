@@ -55,7 +55,7 @@ for(let i = 0; i < word.length; i++) {
 }
 
 let remainingLetters = word.length;
-let numberOfAttempts = 3;
+let numberOfAttempts = word.length + 3;
 
 // Игровой цикл
 
@@ -81,18 +81,17 @@ while(remainingLetters > 0 && numberOfAttempts > 0 ) {
          if(word[j] === guess) {
             answerArray[j] = guess;
             remainingLetters--;
-            numberOfAttempts--;
          } 
       }
+      numberOfAttempts--;
    }
 }
 
 //Отображаем ответ и поздравляем игрока с победой
 
 if(numberOfAttempts === 0) {
-   alert("У вас закончились попытки");
-} 
-/* else {
+   alert("У вас закончились попытки. Вы не отгадали слово.");
+} else {
    alert(answerArray.join(" "));
    alert("Отлично! Было загадано слово " + word);
-} */
+}
