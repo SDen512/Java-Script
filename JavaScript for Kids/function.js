@@ -66,3 +66,40 @@ let medalForScore = function (score) {
    return "Gold";
 };
 console.log(medalForScore(6));
+
+//Упражнения
+
+let add = function(numberOne, numberTwo) {
+   return numberOne + numberTwo;
+};
+let multiply = function(numberThree, numberFour) {
+   return numberThree * numberFour;
+};
+
+let resultExpression = add(multiply(36325, 9824), 777);
+console.log(resultExpression);
+
+//Совпадают ли массивы
+/* Напишите функцию areArraysSame, которая принимает два массива с числами в качестве аргументов. Она должна возвращать true, если эти массивы одинаковые (то есть содержат одни и те же числа в одном и том же порядке), или false, если массивы различаются. Убедитесь, что ваша функция работает правильно, запустив такой код:
+
+areArraysSame([1, 2, 3], [4, 5, 6]);
+false
+areArraysSame([1, 2, 3], [1, 2, 3]);
+true
+areArraysSame([1, 2, 3], [1, 2, 3, 4]);
+false */
+
+let firstArray = [1, 2, 3];
+let secondArray = [1, 2, 3, 4];
+let areArraysSame = function(firstArray, secondArray) {
+   if(firstArray.length !== secondArray.length) {
+      return false;
+   } 
+      for(i = 0; i < firstArray.length; i++) {
+         if(firstArray[i] !== secondArray[i]) {
+            return false;
+         } 
+      }
+   return true;
+};
+console.log(areArraysSame(firstArray, secondArray));
