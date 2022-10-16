@@ -152,6 +152,7 @@ let getGuess = function() {
    // Запрашивает ответ игрока с помощью prompt
 
    let guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры.");
+   guess = guess.toLowerCase();
    return guess;
    
 };
@@ -162,24 +163,31 @@ let updateGameState = function(guess, word, answerArray) {
    // возвращает число, обозначающее, сколько раз буква guess
  // встречается в слове, чтобы можно было обновить значение
  // remainingLetters
-
+let numberGuess = 0;
  for(let j = 0; j < word.length; j++) {
-   if(word[j] === guess && answerArray[j] === "_") {
-    return  answerArray[j] = guess;
-      //remainingLetters--;
+   if(word[j] === guess) {
+      answerArray[j] = guess;
+      numberGuess++;
    } 
 }
+   return numberGuess;
 };
 
-let showAnswerAndCongratulatePlayer = function(answerArray) {
+let showAnswerAndCongratulatePlayer = function() {
 
    // С помощью alert показывает игроку отгаданное слово 
- // и поздравляет его с победой
+ // и поздравляет его с победой или сообщает о закончившихся попытках
 
+ if(numberOfAttempts === 0) {
+   alert("У вас закончились попытки. Вы не отгадали слово.");
+} else {
    alert(answerArray.join(" "));
    alert("Отлично! Было загадано слово " + word);
+}
 
 };
+
+
 
 //Описание игры при помощи созданных функций
 
@@ -192,8 +200,11 @@ let answerArray = setupAnswerArray(word);
 //сколько букв осталось угадать
 let remainingLetters = word.length;
 
+//количество попыток
+let numberOfAttempts = word.length + 3;
+
 //игровой цикл
-while(remainingLetters > 0) {
+while(remainingLetters > 0 && numberOfAttempts > 0) {
    showPlayerProgress(answerArray);
    //Ответ игрока
    let guess = getGuess();
@@ -201,10 +212,14 @@ while(remainingLetters > 0) {
       break;
    } else if(guess.length !== 1) {
       alert("Пожалуйста, введите только одну букву.");
-   }else {
+   } else {
+
       //correctGuesses: количество открытых букв
       let correctGuesses = updateGameState(guess, word, answerArray);
       remainingLetters -=correctGuesses;
-   }
+      numberOfAttempts--;
+   } 
 }
-showAnswerAndCongratulatePlayer(answerArray);
+//отображаем ответ в зависимости от результата игры
+
+showAnswerAndCongratulatePlayer();
