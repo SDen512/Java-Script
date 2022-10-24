@@ -46,11 +46,28 @@ $(".slide").slideUp(1000).slideDown(1000);
 
 //Использование fadeOut and fadeIn для одного элемента без цепного вызова и в цикле
 
-for(let i = 0; i < 5; i++) {
+/* for(let i = 0; i < 5; i++) {
    $(".test-heading").fadeOut(2000);
    $(".test-heading").fadeIn(2000);
-}
+} */
 
 //Методы show and hide
 
-$(".test-text").hide(3000).show(3000);
+/* $(".test-text").hide(3000).show(3000); */
+
+
+//Задание 1
+
+/* $(".task1").append("<h2>Мои друзья</h2>");
+let frendsArray = ["Илья","Олег", "Дима"];
+for(let i = 0; i < frendsArray.length; i++ ) {
+   $(".task1").append("<p class=\"myfriends\">" + frendsArray[i] + "</p>");
+}
+$(".myfriends").hide(2000).fadeIn(4000);
+$(".myfriends").append(" лучший."); */
+
+//Задание 2
+
+for(let k = 0; k < 5; k++) {
+   $(".heading2").fadeOut(1000).fadeIn(1000);
+}
