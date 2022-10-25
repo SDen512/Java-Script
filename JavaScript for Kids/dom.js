@@ -68,6 +68,16 @@ $(".myfriends").append(" лучший."); */
 
 //Задание 2
 
+/* let time = 1000;
 for(let k = 0; k < 5; k++) {
-   $(".heading2").fadeOut(1000).fadeIn(1000);
-}
+   $(".heading2").fadeOut(time).fadeIn(time);
+   time +=1000;
+} */
+
+//Задание 3
+
+/* $(".heading3").fadeOut(2000).delay(5000).fadeIn(1000); */
+
+//Задание 4
+
+$(".heading4").fadeTo(2000, 0.5);
