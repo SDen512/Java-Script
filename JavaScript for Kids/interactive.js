@@ -12,12 +12,12 @@ clearTimeout(timeoutId); */
 
 // Многократный запуск кода и setInterval
 
-let counter = 1;
+/* let counter = 1;
 let printMessage = function () {
    console.log("Ты смотришь в консоль " + counter + " секунд");
    counter+=5;
 };
-let test = setInterval(printMessage, 5000);
+let test = setInterval(printMessage, 5000); */
 //clearInterval(test);
 
 // Анимация элементов с помощью setInterval
@@ -31,3 +31,10 @@ let moveHeading = function () {
    }
 };
 setInterval(moveHeading, 15);
+
+// Реакция на действия пользователя
+
+let clickHandler = function (event) {
+   console.log("Click "+ event.pageX + " " + event.pageY);
+};
+$(".heading-click").click(clickHandler);
